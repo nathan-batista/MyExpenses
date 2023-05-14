@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		26A02C0CAEE808B35D3AB9B5 /* Pods_MyExpenses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301B7DDEE83E824612997E0D /* Pods_MyExpenses.framework */; };
 		4B0B22A6299A690100290130 /* MyExpensesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B22A5299A690100290130 /* MyExpensesApp.swift */; };
-		4B0B22A8299A690100290130 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B22A7299A690100290130 /* ContentView.swift */; };
 		4B0B22AA299A690300290130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0B22A9299A690300290130 /* Assets.xcassets */; };
 		4B0B22AD299A690300290130 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0B22AC299A690300290130 /* Preview Assets.xcassets */; };
 		4B0B22B5299A69C000290130 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B22B4299A69C000290130 /* Expense.swift */; };
@@ -22,13 +21,14 @@
 		4B84D455299C6BDF0054B813 /* HomeExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B84D454299C6BDF0054B813 /* HomeExpenseView.swift */; };
 		4B84D459299C726E0054B813 /* PriceHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B84D458299C726E0054B813 /* PriceHandlers.swift */; };
 		4B84D45B299C72960054B813 /* ExpenseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B84D45A299C72960054B813 /* ExpenseRow.swift */; };
+		C23D53032A11937C003E0314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D53022A11937C003E0314 /* AppDelegate.swift */; };
+		C2502EC92A11922E001246D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2502EC82A11922E001246D8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		301B7DDEE83E824612997E0D /* Pods_MyExpenses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyExpenses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0B22A2299A690100290130 /* MyExpenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyExpenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0B22A5299A690100290130 /* MyExpensesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesApp.swift; sourceTree = "<group>"; };
-		4B0B22A7299A690100290130 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B0B22A9299A690300290130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0B22AC299A690300290130 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B0B22B4299A69C000290130 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -43,6 +43,8 @@
 		4B84D45A299C72960054B813 /* ExpenseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRow.swift; sourceTree = "<group>"; };
 		8E62B96F9F74F7F05F67E4D7 /* Pods-MyExpenses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExpenses.release.xcconfig"; path = "Target Support Files/Pods-MyExpenses/Pods-MyExpenses.release.xcconfig"; sourceTree = "<group>"; };
 		B729D82AF94131C210808482 /* Pods-MyExpenses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExpenses.debug.xcconfig"; path = "Target Support Files/Pods-MyExpenses/Pods-MyExpenses.debug.xcconfig"; sourceTree = "<group>"; };
+		C23D53022A11937C003E0314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2502EC82A11922E001246D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +80,14 @@
 		4B0B22A4299A690100290130 /* MyExpenses */ = {
 			isa = PBXGroup;
 			children = (
+				C2502EC82A11922E001246D8 /* GoogleService-Info.plist */,
+				4B0B22A5299A690100290130 /* MyExpensesApp.swift */,
+				C23D53022A11937C003E0314 /* AppDelegate.swift */,
+				4B0B22A9299A690300290130 /* Assets.xcassets */,
 				4B84D451299C654D0054B813 /* Utils */,
 				4B0B22BB299A6DBB00290130 /* AddExpense */,
 				4B0B22B6299A6B8F00290130 /* Home */,
 				4B0B22B3299A69B100290130 /* Model */,
-				4B0B22A5299A690100290130 /* MyExpensesApp.swift */,
-				4B0B22A7299A690100290130 /* ContentView.swift */,
-				4B0B22A9299A690300290130 /* Assets.xcassets */,
 				4B0B22AB299A690300290130 /* Preview Content */,
 			);
 			path = MyExpenses;
@@ -229,6 +232,7 @@
 				4B0B229F299A690100290130 /* Frameworks */,
 				4B0B22A0299A690100290130 /* Resources */,
 				3065E8EEE58A195746333725 /* [CP] Embed Pods Frameworks */,
+				C27FEC712A119B960077EE61 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -278,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0B22AD299A690300290130 /* Preview Assets.xcassets in Resources */,
+				C2502EC92A11922E001246D8 /* GoogleService-Info.plist in Resources */,
 				4B0B22AA299A690300290130 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +329,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C27FEC712A119B960077EE61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}\n",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)\n",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -334,11 +358,11 @@
 				4B0B22BF299A6DDC00290130 /* AddExpenseViewModel.swift in Sources */,
 				4B84D459299C726E0054B813 /* PriceHandlers.swift in Sources */,
 				4B0B22B5299A69C000290130 /* Expense.swift in Sources */,
-				4B0B22A8299A690100290130 /* ContentView.swift in Sources */,
 				4B0B22C1299A758F00290130 /* AddExpenseView.swift in Sources */,
 				4B84D455299C6BDF0054B813 /* HomeExpenseView.swift in Sources */,
 				4B0B22A6299A690100290130 /* MyExpensesApp.swift in Sources */,
 				4B84D45B299C72960054B813 /* ExpenseRow.swift in Sources */,
+				C23D53032A11937C003E0314 /* AppDelegate.swift in Sources */,
 				4B0B22B9299A6C1500290130 /* HomeViewModel.swift in Sources */,
 				4B68515229A69F7300E27D2C /* ViewModifiersExtension.swift in Sources */,
 				4B68515029A69E0000E27D2C /* ColorExtension.swift in Sources */,
@@ -471,7 +495,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"MyExpenses/Preview Content\"";
+				DEVELOPMENT_TEAM = X7KR94TCJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -501,6 +527,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyExpenses/Preview Content\"";
+				DEVELOPMENT_TEAM = X7KR94TCJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
