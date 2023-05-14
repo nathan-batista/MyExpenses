@@ -8,6 +8,11 @@
 import Foundation
 import SwiftUI
 
+struct PriceColors {
+    let title: String
+    let color: Color
+}
+
 struct PriceColorHandler {
     enum Constants {
         static let cheapColor = Color(UIColor.systemGreen)
@@ -15,13 +20,11 @@ struct PriceColorHandler {
         static let expensePriceColor = Color(UIColor.systemRed)
     }
     
-    struct AllPriceLegend {
-        static var defaultItem: [String: Color] = [
-            "Cheap": Constants.cheapColor,
-            "Medium": Constants.mediumPriceColor,
-            "Expensive": Constants.expensePriceColor
-        ]
-    }
+    static let defaultItem: [PriceColors] = [
+        PriceColors(title: "Cheap", color: Constants.cheapColor),
+        PriceColors(title: "Medium", color: Constants.mediumPriceColor),
+        PriceColors(title: "Expensive", color: Constants.expensePriceColor)
+    ]
     
     static func getColor(price: Int) -> Color {
         let newPrice = price/100

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealmSwift
+import FirebaseAnalytics
 
 struct HomeExpenseView: View {
     
@@ -14,6 +15,8 @@ struct HomeExpenseView: View {
         static let plusImageSize: CGFloat = 10
         static let textColor = Color(UIColor.label)
         static let plusImageName = "plus"
+        static let listBackground = Color.cyan.opacity(0.7)
+        static let plusButtonColor = Color.cyan
     }
     
     @ObservedObject var viewModel: HomeViewModel
@@ -21,6 +24,7 @@ struct HomeExpenseView: View {
     var toolbarAddItem: some View {
         Button {
             viewModel.showAddExpense.toggle()
+            Analytics.logEvent("tap_add_expense", parameters: nil)
         } label: {
             Image(systemName: Constants.plusImageName)
                 .frame(width: Constants.plusImageSize, height: Constants.plusImageSize)
@@ -28,7 +32,7 @@ struct HomeExpenseView: View {
                 .padding()
                 .background(
                     Circle()
-                        .fill(.green)
+                        .fill(Constants.plusButtonColor)
                 )
         }
     }
@@ -60,8 +64,8 @@ struct HomeExpenseView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                             HStack {
-                                ForEach(Array(PriceColorHandler.AllPriceLegend.defaultItem.keys), id: \.self) { key in
-                                    getLegendItem(key, PriceColorHandler.AllPriceLegend.defaultItem[key] ?? .white)
+                                ForEach(Array(PriceColorHandler.defaultItem), id: \.title) { item in
+                                    getLegendItem(item.title, item.color)
                                 }
                             }
                         }
@@ -81,7 +85,7 @@ struct HomeExpenseView: View {
                         
                         Spacer(minLength: 0)
                     }
-                    .modifier(ViewBackgroundModifier(backgroundColor: .cyan.opacity(0.7)))
+                    .modifier(ViewBackgroundModifier(backgroundColor: Constants.listBackground))
 
                 }
             }
@@ -90,6 +94,9 @@ struct HomeExpenseView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     toolbarAddItem
                 }
+            }
+            .onAppear {
+                Analytics.logEvent("home_view", parameters: nil)
             }
         }
         .sheet(isPresented: $viewModel.showAddExpense) {
